@@ -77,11 +77,8 @@ export default {
       }
       let isLoggedIn =
         localStorage.getItem("isLoggedIn") === "false" ? false : true;
-      if (isLoggedIn) {
-        localStorage.setItem("isLoggedIn", false);
-      } else {
-        localStorage.setItem("isLoggedIn", true);
-      }
+      localStorage.setItem("isLoggedIn", true);
+      this.$router.push({ name: "Home" });
       this.changeButtonName();
     },
     changeButtonName() {
